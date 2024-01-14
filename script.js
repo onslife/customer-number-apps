@@ -61,9 +61,9 @@ function renderData(data) {
     let isComplete = data.map(d => {
         el.push(`
             <article class="book_item">
-                <p>Nomor Pelanggan  : ${d.title}</p>
-                <p>Nomor Handphone  : ${d.year} </p>
-                <p>Alamat           : ${d.author}</p>
+                <p>No.Pelanggan: ${d.title}</p>
+                <p>No.HP: ${d.year} </p>
+                <p>Alamat: ${d.author}</p>
 
                 <div class="action">
                     <div class="green" data-action="isComplete" data-bookid="${d.id}">${d.isComplete == false ? `<i class="fa-solid fa-circle-check" data-action="isComplete" data-bookid="${d.id}"></i>` : `<i class="fa-solid fa-circle-xmark" data-action="isComplete" data-bookid="${d.id}"></i>`}</div>
@@ -209,11 +209,11 @@ function showUpdateForm(target, id) {
           <form id="inputBook" autocomplete="off" onsubmit="return updateBook(${id})">
             <h3>Ubah Data</h3>
             <div class="input">
-              <label for="inputBookTitleUpdate">Nomor Pelanggan</label>
+              <label for="inputBookTitleUpdate">No.Pelanggan</label>
               <input id="inputBookTitleUpdate" value="${changed.title}" type="text" required />
             </div>
             <div class="input">
-              <label for="inputBookYearUpdate">Nomor Handphone</label>
+              <label for="inputBookYearUpdate">No.HP</label>
               <input id="inputBookYearUpdate" value="${changed.year}" type="number" required />
             </div>
             <div class="input">
@@ -338,9 +338,9 @@ function searchBook() {
     result.forEach(d => {
         el += `
                 <article class="book_item">
-                    <h3>Nomor Pelanggan ${d.title}</h3>
-                    <p>Alamat: ${d.author}</p>
-                    <p>Nomor Handphone: ${d.year} </p>
+                    <h3>No.Pelanggan : ${d.title}</h3>
+                    <p>No.HP : ${d.year} </p>
+                    <p>Alamat : ${d.author}</p>
                     <div class="action">
                         <div class="green" data-action="isComplete" data-bookid="${d.id}">${d.isComplete == false ? `<i class="fa-solid fa-circle-check" data-action="isComplete" data-bookid="${d.id}"></i>` : `<i class="fa-solid fa-circle-xmark" data-action="isComplete" data-bookid="${d.id}"></i>`}</div>
                         <div class="orange" data-action="update" data-bookid="${d.id}"><i class="fa-solid fa-pen-to-square" data-action="update" data-bookid="${d.id}"></i></div>
